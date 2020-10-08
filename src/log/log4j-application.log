@@ -1,0 +1,36 @@
+2020-10-08 16:11:56.088 INFO  com.epam.library.Runner:21 - Adding books to the Library.
+2020-10-08 16:12:09.154 INFO  com.epam.library.Runner:20 - Searching Books by Tag is Ended. 0 books found.
+2020-10-08 16:12:09.176 INFO  com.epam.library.Runner:42 - Removing Book is Ended. Current Library size is 1.
+2020-10-08 16:12:09.184 INFO  com.epam.library.Runner:20 - Searching Books by Tag is Ended. 2 books found.
+2020-10-08 16:12:09.204 INFO  com.epam.library.Runner:61 - Sorting Books is Ended.
+2020-10-08 16:12:09.205 INFO  com.epam.library.Runner:33 - Adding Book is Ended. Current Library size is 3.
+2020-10-08 16:12:54.052 INFO  com.epam.library.Runner:35 - Program Started.
+2020-10-08 16:12:54.060 INFO  com.epam.library.Runner:21 - Adding books to the Library.
+2020-10-08 16:12:54.065 INFO  com.epam.library.Runner:10 - 
+Now in our bookshelves:
+"Carrie", King S., 1976, Genre: Thriller
+"The Shining", King S., 1980, Genre: Thriller
+"A Game of Thrones", Martin G., 1996, Genre: Fantasy
+"A Feast for Crows", Martin G., 2005, Genre: Fantasy
+
+2020-10-08 16:12:54.071 INFO  com.epam.library.Runner:33 - Adding Book is Ended. Current Library size is 5.
+2020-10-08 16:12:54.082 INFO  com.epam.library.Runner:61 - Sorting Books is Ended.
+2020-10-08 16:12:54.087 ERROR com.epam.library.Runner:68 - Cause of exception is: com.epam.library.exception.DataException: 
+The book being added ("A Feast for Crows", Martin G., 2005, Genre: Fantasy) is in the library.
+
+2020-10-08 16:12:54.087 ERROR com.epam.library.Runner:76 - Cause of exception is: com.epam.library.exception.DataException: 
+The book being deleted ("A Dance with Dragons", Martin G., 2011, Genre: Fantasy) is not in the library.
+
+2020-10-08 16:12:54.092 INFO  com.epam.library.Runner:20 - Searching Books by Tag is Ended. 2 books found.
+2020-10-08 16:12:54.092 INFO  com.epam.library.Runner:10 - 
+Now in our bookshelves:
+"A Game of Thrones", Martin G., 1996, Genre: Fantasy
+"A Feast for Crows", Martin G., 2005, Genre: Fantasy
+
+2020-10-08 16:12:54.093 INFO  com.epam.library.Runner:61 - Program ended.
+2020-10-08 16:13:42.816 INFO  com.epam.library.Runner:21 - Adding books to the Library.
+2020-10-08 16:13:42.847 INFO  com.epam.library.Runner:20 - Searching Books by Tag is Ended. 0 books found.
+2020-10-08 16:13:42.854 INFO  com.epam.library.Runner:42 - Removing Book is Ended. Current Library size is 1.
+2020-10-08 16:13:42.858 INFO  com.epam.library.Runner:20 - Searching Books by Tag is Ended. 2 books found.
+2020-10-08 16:13:42.868 INFO  com.epam.library.Runner:61 - Sorting Books is Ended.
+2020-10-08 16:13:42.869 INFO  com.epam.library.Runner:33 - Adding Book is Ended. Current Library size is 3.
