@@ -67,14 +67,14 @@ public class BookDaoTest {
     }
 
     @Test
-    public void testFindByTagShouldFindCorrectListWhenAuthorExists() {
+    public void testFindByTagShouldFindCorrectListWhenAuthorExists() throws DataException {
         List<Book> findByAuthor = actualDao.findByTag(BooksField.AUTHOR_NAME, SEARCH_AUTHOR);
         BookDao findingActualDao = new BookDao(findByAuthor);
         Assert.assertEquals(EXPECTED_SEARCHING_BOOK_DAO, findingActualDao);
     }
 
     @Test
-    public void testFindByTagShouldReturnEmptyListWhenAuthorNotExists() {
+    public void testFindByTagShouldReturnEmptyListWhenAuthorNotExists() throws DataException {
         List<Book> findByAuthor = actualDao.findByTag(BooksField.AUTHOR_NAME, NOT_EXIST_AUTHOR);
         BookDao findingActualDao = new BookDao(findByAuthor);
         Assert.assertEquals(EXPECTED_EMPTY_DAO, findingActualDao);

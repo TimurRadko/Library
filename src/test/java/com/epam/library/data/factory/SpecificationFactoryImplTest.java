@@ -10,7 +10,7 @@ public class SpecificationFactoryImplTest {
     @Test
     public void testCreateShouldReturnEntity() {
         SpecificationFactory factory = new SpecificationFactoryImpl();
-        Specification specification = factory.create(BooksField.AUTHOR_NAME);
+        Specification<String> specification = factory.create(BooksField.AUTHOR_NAME);
         Assert.assertNotNull(specification);
     }
 }

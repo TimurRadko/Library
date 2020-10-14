@@ -34,3 +34,57 @@ Now in our bookshelves:
 2020-10-08 16:13:42.858 INFO  com.epam.library.Runner:20 - Searching Books by Tag is Ended. 2 books found.
 2020-10-08 16:13:42.868 INFO  com.epam.library.Runner:61 - Sorting Books is Ended.
 2020-10-08 16:13:42.869 INFO  com.epam.library.Runner:33 - Adding Book is Ended. Current Library size is 3.
+2020-10-14 20:04:16.047 INFO  com.epam.library.Runner:35 - Program Started.
+2020-10-14 20:04:16.101 INFO  com.epam.library.Runner:25 - Adding books to the Library.
+2020-10-14 20:04:16.163 INFO  com.epam.library.Runner:10 - 
+Now in our bookshelves:
+"Carrie", King S., 1976, Genre: Thriller
+"The Shining", King S., 1980, Genre: Thriller
+"A Game of Thrones", Martin G., 1996, Genre: Fantasy
+"A Feast for Crows", Martin G., 2005, Genre: Fantasy
+
+2020-10-14 20:04:16.169 INFO  com.epam.library.Runner:33 - Adding Book is Ended. Current Library size is 5.
+2020-10-14 20:04:16.273 INFO  com.epam.library.Runner:61 - Sorting Books is Ended.
+2020-10-14 20:04:16.276 ERROR com.epam.library.Runner:68 - Cause of exception is: com.epam.library.exception.DataException: 
+The book being added ("A Feast for Crows", Martin G., 2005, Genre: Fantasy) is in the library.
+
+2020-10-14 20:04:16.276 ERROR com.epam.library.Runner:76 - Cause of exception is: com.epam.library.exception.DataException: 
+The book being deleted ("A Dance with Dragons", Martin G., 2011, Genre: Fantasy) is not in the library.
+
+2020-10-14 20:04:16.289 INFO  com.epam.library.Runner:20 - Searching Books by Tag is Ended. 2 books found.
+2020-10-14 20:04:16.290 INFO  com.epam.library.Runner:10 - 
+Now in our bookshelves:
+"A Game of Thrones", Martin G., 1996, Genre: Fantasy
+"A Feast for Crows", Martin G., 2005, Genre: Fantasy
+
+2020-10-14 20:04:16.290 INFO  com.epam.library.Runner:61 - Program ended.
+2020-10-14 20:47:58.754 INFO  com.epam.library.Runner:22 - Searching Books by Tag is Ended. 0 books found.
+2020-10-14 20:47:58.780 INFO  com.epam.library.Runner:42 - Removing Book is Ended. Current Library size is 1.
+2020-10-14 20:47:58.782 INFO  com.epam.library.Runner:22 - Searching Books by Tag is Ended. 2 books found.
+2020-10-14 20:47:58.845 INFO  com.epam.library.Runner:61 - Sorting Books is Ended.
+2020-10-14 20:47:58.847 INFO  com.epam.library.Runner:33 - Adding Book is Ended. Current Library size is 3.
+2020-10-14 20:48:06.630 INFO  com.epam.library.Runner:25 - Adding books to the Library.
+2020-10-14 20:56:01.543 INFO  com.epam.library.Runner:35 - Program Started.
+2020-10-14 20:56:01.552 INFO  com.epam.library.Runner:25 - Adding books to the Library.
+2020-10-14 20:56:01.567 INFO  com.epam.library.Runner:10 - 
+Now in our bookshelves:
+"Carrie", King S., 1976, Genre: Thriller
+"The Shining", King S., 1980, Genre: Thriller
+"A Game of Thrones", Martin G., 1996, Genre: Fantasy
+"A Feast for Crows", Martin G., 2005, Genre: Fantasy
+
+2020-10-14 20:56:01.572 INFO  com.epam.library.Runner:33 - Adding Book is Ended. Current Library size is 5.
+2020-10-14 20:56:01.585 INFO  com.epam.library.Runner:61 - Sorting Books is Ended.
+2020-10-14 20:56:01.588 ERROR com.epam.library.Runner:68 - Cause of exception is: com.epam.library.exception.DataException: 
+The book being added ("A Feast for Crows", Martin G., 2005, Genre: Fantasy) is in the library.
+
+2020-10-14 20:56:01.588 ERROR com.epam.library.Runner:76 - Cause of exception is: com.epam.library.exception.DataException: 
+The book being deleted ("A Dance with Dragons", Martin G., 2011, Genre: Fantasy) is not in the library.
+
+2020-10-14 20:56:01.602 INFO  com.epam.library.Runner:22 - Searching Books by Tag is Ended. 2 books found.
+2020-10-14 20:56:01.602 INFO  com.epam.library.Runner:10 - 
+Now in our bookshelves:
+"A Game of Thrones", Martin G., 1996, Genre: Fantasy
+"A Feast for Crows", Martin G., 2005, Genre: Fantasy
+
+2020-10-14 20:56:01.603 INFO  com.epam.library.Runner:61 - Program ended.

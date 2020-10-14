@@ -48,9 +48,9 @@ public class BookDao {
         return bookToString.substring(0, lastIndex);
     }
 
-    public List<Book> findByTag(BooksField booksField, String value) {
+    public <T> List<Book> findByTag(BooksField booksField, T value) throws DataException {
         SpecificationFactory specificationFactory = new SpecificationFactoryImpl();
-        Specification specification = specificationFactory.create(booksField);
+        Specification<T> specification = specificationFactory.create(booksField);
         return specification.find(booksList, value);
     }
 

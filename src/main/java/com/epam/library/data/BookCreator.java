@@ -7,8 +7,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BookCreator {
-    private final static String DATA_SEPARATOR = "\n";
-    private final static String LINE_SEPARATOR = ",";
+    private static final String DATA_SEPARATOR = "\n";
+    private static final String LINE_SEPARATOR = ",";
+    private static final int TITLE = 0;
+    private static final int AUTHOR_NAME = 1;
+    private static final int WRITING_YEAR = 2;
+    private static final int GENRE = 3;
 
     public List<Book> createBooksList(String data) {
         String[] lines = data.split(DATA_SEPARATOR);
@@ -25,10 +29,10 @@ public class BookCreator {
     private Book createBook(String line) {
         String[] fields = line.split(LINE_SEPARATOR);
 
-        String title = fields[0];
-        String authorName = fields[1];
-        int writingYear = Integer.parseInt(fields[2]);
-        String genre = fields[3];
+        String title = fields[TITLE];
+        String authorName = fields[AUTHOR_NAME];
+        int writingYear = Integer.parseInt(fields[WRITING_YEAR]);
+        String genre = fields[GENRE];
 
         return new Book(title, authorName, writingYear, genre);
     }

@@ -4,5 +4,5 @@ import com.epam.library.data.BooksField;
 import com.epam.library.data.specification.Specification;
 
 public interface SpecificationFactory {
-    Specification create(BooksField booksField);
+    <T> Specification<T> create(BooksField booksField);
 }
