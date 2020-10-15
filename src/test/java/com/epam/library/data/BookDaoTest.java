@@ -12,22 +12,23 @@ import java.util.Collections;
 import java.util.List;
 
 public class BookDaoTest {
+    private static final Book CARRIE_BOOK = new Book("Carrie", "King S.", 1976, "Thriller");
+    private static final Book THE_SHINING_BOOK = new Book("The Shining", "King S.", 1980, "Thriller");
+    private static final Book NINETEEN_EIGHTY_FOUR_BOOK = new Book("1984", "Orwell G.", 1948, "Dystopian");
+
     private static final Book CORRECT_ADDED_BOOK = new Book("1984", "Orwell G.", 1948, "Dystopian");
     private static final Book FAILED_ADDED_BOOK = new Book("Carrie", "King S.", 1976, "Thriller");
     private static final BookDao EXPECTED_BOOK_DAO_FOR_ADD =
-            new BookDao(Arrays.asList(new Book("Carrie", "King S.", 1976, "Thriller"),
-                    new Book("The Shining", "King S.", 1980, "Thriller"),
-                    new Book("1984", "Orwell G.", 1948, "Dystopian")));
+            new BookDao(Arrays.asList(CARRIE_BOOK, THE_SHINING_BOOK, NINETEEN_EIGHTY_FOUR_BOOK));
 
-    private static final Book CORRECT_REMOVED_BOOK = new Book("Carrie", "King S.", 1976, "Thriller");
-    private static final Book FAILED_REMOVED_BOOK = new Book("1984", "Orwell G.", 1948, "Dystopian");
+    private static final Book CORRECT_REMOVED_BOOK = CARRIE_BOOK;
+    private static final Book FAILED_REMOVED_BOOK = NINETEEN_EIGHTY_FOUR_BOOK;
     private static final BookDao EXPECTED_BOOK_DAO_FOR_REMOVE =
-            new BookDao(Collections.singletonList(new Book("The Shining", "King S.", 1980, "Thriller")));
+            new BookDao(Collections.singletonList(THE_SHINING_BOOK));
 
     private static final String SEARCH_AUTHOR = "King S.";
     private static final BookDao EXPECTED_SEARCHING_BOOK_DAO =
-            new BookDao(Arrays.asList(new Book("Carrie", "King S.", 1976, "Thriller"),
-                    new Book("The Shining", "King S.", 1980, "Thriller")));
+            new BookDao(Arrays.asList(CARRIE_BOOK, THE_SHINING_BOOK));
 
     private static final BookDao EXPECTED_EMPTY_DAO = new BookDao(new ArrayList<Book>());
     private static final String NOT_EXIST_AUTHOR = "Pancake";
