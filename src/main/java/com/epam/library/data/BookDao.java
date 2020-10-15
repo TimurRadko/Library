@@ -54,11 +54,12 @@ public class BookDao {
         return specification.find(booksList, value);
     }
 
-    public void sortBooksByTag(BooksField booksField) {
+    public List<Book> sortBooksByTag(BooksField booksField) {
         BookComparatorFactory comparatorFactory = new BookComparatorFactoryImpl();
         Comparator<Book> comparator = comparatorFactory.create(booksField);
         Collections.sort(booksList, comparator);
         Runner.LOGGER.info("Sorting Books is Ended.");
+        return booksList;
     }
 
     @Override

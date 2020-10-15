@@ -9,13 +9,13 @@ public class SpecificationFactoryImpl implements SpecificationFactory {
     public <T> Specification<T> create(BooksField booksField) {
         switch (booksField) {
             case TITLE:
-                return new TitleSpecification<>();
+                return (Specification<T>) new TitleSpecification();
             case AUTHOR_NAME:
-                return new AuthorNameSpecification<>();
+                return (Specification<T>) new AuthorNameSpecification();
             case WRITING_YEAR:
-                return new WritingYearSpecification();
+                return (Specification<T>) new WritingYearSpecification();
             case GENRE:
-                return new GenreSpecification<>();
+                return (Specification<T>) new GenreSpecification();
             default:
                 throw new IllegalArgumentException(String.format("Book field (%s) not found", booksField));
         }

@@ -1,19 +1,12 @@
 package com.epam.library.data.specification;
 
-import com.epam.library.exception.DataException;
 import com.epam.library.model.Book;
 
-public class WritingYearSpecification<T> extends AbstractSpecification<T> {
+public class WritingYearSpecification extends AbstractSpecification<Integer> {
 
     @Override
-    boolean isFieldEqual(Book book, T value) throws DataException {
+    boolean isFieldEqual(Book book, Integer value) {
         Integer writingYear = book.getWritingYear();
-
-        if (value instanceof Integer) {
-            Integer intValue = (Integer) value;
-            return writingYear.equals(intValue);
-        } else {
-            throw new DataException("Invalid input value");
-        }
+        return writingYear.equals(value);
     }
 }

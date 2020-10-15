@@ -48,7 +48,9 @@ public class Runner {
 
         dao.addBook(CORRECT_ADDED_BOOK);
 
-        dao.sortBooksByTag(BooksField.GENRE);
+        List<Book> sortedBooksList = dao.sortBooksByTag(BooksField.GENRE);
+        dao = new BookDao(sortedBooksList);
+        printer.print(dao);
 
         addFailedBook(dao);
 
