@@ -184,3 +184,8 @@ Now in our bookshelves:
 2020-10-15 12:56:40.623 INFO  com.epam.library.Runner:22 - Searching Books by Tag is Ended. 2 books found.
 2020-10-15 12:56:40.630 INFO  com.epam.library.Runner:61 - Sorting Books is Ended.
 2020-10-15 12:56:40.633 INFO  com.epam.library.Runner:33 - Adding Book is Ended. Current Library size is 3.
+2020-10-15 12:58:25.363 INFO  com.epam.library.Runner:22 - Searching Books by Tag is Ended. 0 books found.
+2020-10-15 12:58:25.393 INFO  com.epam.library.Runner:42 - Removing Book is Ended. Current Library size is 1.
+2020-10-15 12:58:25.396 INFO  com.epam.library.Runner:22 - Searching Books by Tag is Ended. 2 books found.
+2020-10-15 12:58:25.404 INFO  com.epam.library.Runner:61 - Sorting Books is Ended.
+2020-10-15 12:58:25.406 INFO  com.epam.library.Runner:33 - Adding Book is Ended. Current Library size is 3.

@@ -90,8 +90,8 @@ public class BookDaoTest {
 
     private List<Book> createBooksList() {
         List<Book> booksList = new ArrayList<>();
-        booksList.add(new Book("Carrie", "King S.", 1976, "Thriller"));
-        booksList.add(new Book("The Shining", "King S.", 1980, "Thriller"));
+        booksList.add(CARRIE_BOOK);
+        booksList.add(THE_SHINING_BOOK);
         return booksList;
     }
 }
