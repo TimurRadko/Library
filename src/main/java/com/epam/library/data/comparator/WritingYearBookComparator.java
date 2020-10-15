@@ -2,11 +2,12 @@ package com.epam.library.data.comparator;
 
 import com.epam.library.model.Book;
 
-public class WritingYearBookComparator extends AbstractBookComparator {
+public class WritingYearBookComparator implements BookComparator {
 
     @Override
-    String getField(Book book) {
-        int writingYear = book.getWritingYear();
-        return String.valueOf(writingYear);
+    public int compare(Book firstBook, Book secondBook) {
+        int firstBookWritingYear = firstBook.getWritingYear();
+        int secondBookWritingYear = secondBook.getWritingYear();
+        return firstBookWritingYear - secondBookWritingYear;
     }
 }

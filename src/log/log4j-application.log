@@ -131,3 +131,41 @@ Now in our bookshelves:
 2020-10-15 11:50:29.762 INFO  com.epam.library.Runner:22 - Searching Books by Tag is Ended. 2 books found.
 2020-10-15 11:50:29.773 INFO  com.epam.library.Runner:61 - Sorting Books is Ended.
 2020-10-15 11:50:29.774 INFO  com.epam.library.Runner:33 - Adding Book is Ended. Current Library size is 3.
+2020-10-15 12:03:15.743 INFO  com.epam.library.Runner:35 - Program Started.
+2020-10-15 12:03:15.756 INFO  com.epam.library.Runner:25 - Adding books to the Library.
+2020-10-15 12:03:15.770 INFO  com.epam.library.Runner:10 - 
+Now in our bookshelves:
+"Carrie", King S., 1976, Genre: Thriller
+"The Shining", King S., 1980, Genre: Thriller
+"A Game of Thrones", Martin G., 1996, Genre: Fantasy
+"A Feast for Crows", Martin G., 2005, Genre: Fantasy
+
+2020-10-15 12:03:15.777 INFO  com.epam.library.Runner:33 - Adding Book is Ended. Current Library size is 5.
+2020-10-15 12:03:15.789 INFO  com.epam.library.Runner:61 - Sorting Books is Ended.
+2020-10-15 12:03:15.792 INFO  com.epam.library.Runner:10 - 
+Now in our bookshelves:
+"1984", Orwell G., 1948, Genre: Dystopian
+"A Game of Thrones", Martin G., 1996, Genre: Fantasy
+"A Feast for Crows", Martin G., 2005, Genre: Fantasy
+"Carrie", King S., 1976, Genre: Thriller
+"The Shining", King S., 1980, Genre: Thriller
+
+2020-10-15 12:03:15.793 ERROR com.epam.library.Runner:70 - Cause of exception is: com.epam.library.exception.DataException: 
+The book being added ("A Feast for Crows", Martin G., 2005, Genre: Fantasy) is in the library.
+
+2020-10-15 12:03:15.793 ERROR com.epam.library.Runner:78 - Cause of exception is: com.epam.library.exception.DataException: 
+The book being deleted ("A Dance with Dragons", Martin G., 2011, Genre: Fantasy) is not in the library.
+
+2020-10-15 12:03:15.806 INFO  com.epam.library.Runner:22 - Searching Books by Tag is Ended. 2 books found.
+2020-10-15 12:03:15.806 INFO  com.epam.library.Runner:10 - 
+Now in our bookshelves:
+"A Game of Thrones", Martin G., 1996, Genre: Fantasy
+"A Feast for Crows", Martin G., 2005, Genre: Fantasy
+
+2020-10-15 12:03:15.807 INFO  com.epam.library.Runner:63 - Program ended.
+2020-10-15 12:22:28.372 INFO  com.epam.library.Runner:25 - Adding books to the Library.
+2020-10-15 12:22:28.407 INFO  com.epam.library.Runner:22 - Searching Books by Tag is Ended. 0 books found.
+2020-10-15 12:22:28.413 INFO  com.epam.library.Runner:42 - Removing Book is Ended. Current Library size is 1.
+2020-10-15 12:22:28.416 INFO  com.epam.library.Runner:22 - Searching Books by Tag is Ended. 2 books found.
+2020-10-15 12:22:28.421 INFO  com.epam.library.Runner:61 - Sorting Books is Ended.
+2020-10-15 12:22:28.423 INFO  com.epam.library.Runner:33 - Adding Book is Ended. Current Library size is 3.

@@ -2,10 +2,12 @@ package com.epam.library.data.comparator;
 
 import com.epam.library.model.Book;
 
-public class AuthorNameBookComparator extends AbstractBookComparator {
+public class AuthorNameBookComparator implements BookComparator {
 
     @Override
-    String getField(Book book) {
-        return book.getAuthorName();
+    public int compare(Book firstBook, Book secondBook) {
+        String fistBookAuthorName = firstBook.getAuthorName();
+        String secondBookAuthorName = secondBook.getAuthorName();
+        return fistBookAuthorName.compareToIgnoreCase(secondBookAuthorName);
     }
 }
