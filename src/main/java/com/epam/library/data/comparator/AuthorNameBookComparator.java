@@ -2,7 +2,9 @@ package com.epam.library.data.comparator;
 
 import com.epam.library.model.Book;
 
-public class AuthorNameBookComparator implements BookComparator {
+import java.util.Comparator;
+
+public class AuthorNameBookComparator implements Comparator<Book> {
 
     @Override
     public int compare(Book firstBook, Book secondBook) {
