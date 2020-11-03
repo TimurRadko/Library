@@ -20,7 +20,7 @@ public class BookComparatorFactoryImpl implements BookComparatorFactory {
             case GENRE:
                 return new GenreBookComparator();
             default:
-                throw new IllegalArgumentException(String.format("Book field (%s) not found", booksField));
+                throw new IllegalArgumentException("Book field " + booksField + " not found");
         }
     }
 }

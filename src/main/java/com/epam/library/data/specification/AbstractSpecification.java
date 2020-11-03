@@ -3,13 +3,16 @@ package com.epam.library.data.specification;
 import com.epam.library.Runner;
 import com.epam.library.exception.DataException;
 import com.epam.library.model.Book;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public abstract class AbstractSpecification<T> implements Specification<T> {
+    private static final Logger LOGGER = LogManager.getLogger(AbstractSpecification.class);
 
-    abstract boolean isFieldEqual(Book book, T value) throws DataException;
+    protected abstract boolean isFieldEqual(Book book, T value) throws DataException;
 
     @Override
     public List<Book> find(List<Book> books, T value) throws DataException {
@@ -19,7 +22,7 @@ public abstract class AbstractSpecification<T> implements Specification<T> {
                 findingBooks.add(book);
             }
         }
-        Runner.LOGGER.info(String.format("Searching Books by Tag is Ended. %d books found.", findingBooks.size()));
+        LOGGER.info(String.format("Searching Books by Tag is Ended. %d books found.", findingBooks.size()));
         return findingBooks;
     }
 }

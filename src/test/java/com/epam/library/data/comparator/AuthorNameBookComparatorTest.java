@@ -16,4 +16,25 @@ public class AuthorNameBookComparatorTest {
         int actualResult = comparator.compare(MAJOR_BOOK, MINOR_BOOK);
         Assert.assertEquals(1, actualResult);
     }
+
+    @Test
+    public void testCompareShouldReturnOneWhenFirstBookIsNull() {
+        Comparator<Book> comparator = new AuthorNameBookComparator();
+        int actualResult = comparator.compare(null, MINOR_BOOK);
+        Assert.assertEquals(1, actualResult);
+    }
+
+    @Test
+    public void testCompareShouldReturnOneWhenSecondBookIsNull() {
+        Comparator<Book> comparator = new AuthorNameBookComparator();
+        int actualResult = comparator.compare(MINOR_BOOK, null);
+        Assert.assertEquals(1, actualResult);
+    }
+
+    @Test
+    public void testCompareShouldReturnZeroWhenBothBookIsNull() {
+        Comparator<Book> comparator = new AuthorNameBookComparator();
+        int actualResult = comparator.compare(null, null);
+        Assert.assertEquals(0, actualResult);
+    }
 }

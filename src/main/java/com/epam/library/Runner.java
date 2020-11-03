@@ -1,9 +1,13 @@
 package com.epam.library;
 
-import com.epam.library.data.BookCreator;
+import com.epam.library.data.BookListCreator;
 import com.epam.library.data.BookDao;
-import com.epam.library.data.BooksField;
+import com.epam.library.data.BookParser;
 import com.epam.library.data.FileDataAcquirer;
+import com.epam.library.data.factory.BookComparatorFactory;
+import com.epam.library.data.factory.BookComparatorFactoryImpl;
+import com.epam.library.data.factory.SpecificationFactory;
+import com.epam.library.data.factory.SpecificationFactoryImpl;
 import com.epam.library.exception.DataException;
 import com.epam.library.model.Book;
 import com.epam.library.view.BooksPrinter;
@@ -14,13 +18,9 @@ import org.apache.log4j.Logger;
 import java.util.List;
 
 public class Runner {
-    public static final Logger LOGGER = Logger.getLogger(Runner.class);
+    private static final Logger LOGGER = Logger.getLogger(Runner.class);
     private static final String FILE_PATH = "data/creating_books.txt";
-    private static final Book CORRECT_ADDED_BOOK = new Book("1984", "Orwell G.", 1948, "Dystopian");
-    private static final Book FAILED_BOOK_FOR_ADD = new Book("A Feast for Crows", "Martin G.", 2005, "Fantasy");
-    private static final Book FAILED_BOOK_TO_REMOVE = new Book("A Dance with Dragons", "Martin G.", 2011, "Fantasy");
     private static final String LOGGER_MESSAGE = "Cause of exception is: ";
-    private static final String AUTHOR_NAME_FOR_FINDING = "Martin G.";
 
     public static void main(String[] args) {
 
@@ -34,48 +34,21 @@ public class Runner {
     private static void runLibrary() throws DataException {
         LOGGER.info("Program Started.");
 
-        FileDataAcquirer dataAcquirer = new FileDataAcquirer(FILE_PATH);
-        String data = dataAcquirer.read();
+        FileDataAcquirer dataAcquirer = new FileDataAcquirer();
+        List<String> lines = dataAcquirer.read(FILE_PATH);
 
-        BookCreator bookCreator = new BookCreator();
-        List<Book> bookList = bookCreator.createBooksList(data);
+        BookParser bookParser = new BookParser();
+        BookListCreator bookListCreator = new BookListCreator(bookParser);
+        List<Book> bookList = bookListCreator.createBooksList(lines);
 
-        BookDao dao = new BookDao(bookList);
+        SpecificationFactory specificationFactory = new SpecificationFactoryImpl();
+        BookComparatorFactory comparatorFactory = new BookComparatorFactoryImpl();
+        BookDao dao = new BookDao(bookList, specificationFactory, comparatorFactory);
 
         BooksPrinterFactory printerFactory = new ConsoleBooksPrinterFactory();
         BooksPrinter printer = printerFactory.create();
         printer.print(dao);
 
-        dao.addBook(CORRECT_ADDED_BOOK);
-
-        List<Book> sortedBooksList = dao.sortBooksByTag(BooksField.GENRE);
-        dao = new BookDao(sortedBooksList);
-        printer.print(dao);
-
-        addFailedBook(dao);
-
-        removeFailedBook(dao);
-
-        List<Book> findByAuthor = dao.findByTag(BooksField.AUTHOR_NAME, AUTHOR_NAME_FOR_FINDING);
-        BookDao findingByAuthor = new BookDao(findByAuthor);
-        printer.print(findingByAuthor);
-
         LOGGER.info("Program ended.");
-    }
-
-    private static void addFailedBook(BookDao dao) {
-        try {
-            dao.addBook(FAILED_BOOK_FOR_ADD);
-        } catch (DataException e) {
-            LOGGER.error(LOGGER_MESSAGE + e);
-        }
-    }
-
-    private static void removeFailedBook(BookDao dao) {
-        try {
-            dao.removeBook(FAILED_BOOK_TO_REMOVE);
-        } catch (DataException e) {
-            LOGGER.error(LOGGER_MESSAGE + e);
-        }
     }
 }

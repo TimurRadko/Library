@@ -5,7 +5,7 @@ import com.epam.library.model.Book;
 public class WritingYearSpecification extends AbstractSpecification<Integer> {
 
     @Override
-    boolean isFieldEqual(Book book, Integer value) {
+    public boolean isFieldEqual(Book book, Integer value) {
         Integer writingYear = book.getWritingYear();
         return writingYear.equals(value);
     }

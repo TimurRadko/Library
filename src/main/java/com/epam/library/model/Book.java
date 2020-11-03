@@ -64,6 +64,6 @@ public class Book {
     @Override
     public String toString() {
         return "\"" + title + "\", " + authorName + ", " + writingYear +
-                ", Genre: " + genre + "\n";
+                ", Genre: " + genre;
     }
 }

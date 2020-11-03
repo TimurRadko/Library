@@ -1,96 +1,70 @@
 package com.epam.library.data;
 
-import com.epam.library.Runner;
 import com.epam.library.data.factory.BookComparatorFactory;
-import com.epam.library.data.factory.BookComparatorFactoryImpl;
 import com.epam.library.data.factory.SpecificationFactory;
-import com.epam.library.data.factory.SpecificationFactoryImpl;
 import com.epam.library.data.specification.Specification;
 import com.epam.library.exception.DataException;
 import com.epam.library.model.Book;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
 public class BookDao {
+    private static final Logger LOGGER = LogManager.getLogger(BookDao.class);
     private final List<Book> booksList;
+    private final SpecificationFactory specificationFactory;
+    private final BookComparatorFactory comparatorFactory;
 
-    public BookDao(List<Book> booksList) {
+    public BookDao(List<Book> booksList,
+                   SpecificationFactory specificationFactory,
+                   BookComparatorFactory comparatorFactory) {
         this.booksList = booksList;
+        this.specificationFactory = specificationFactory;
+        this.comparatorFactory = comparatorFactory;
     }
 
-    private int getBookDaoSize() {
-        return booksList.size();
+    public Book get(int index) {
+        return booksList.get(index);
     }
 
-    public void addBook(Book book) throws DataException {
+    public void add(Book book) throws DataException {
         if (booksList.contains(book)) {
-            String bookToString = prepareBooksToString(book);
-            throw new DataException(String.format("\nThe book being added (%s) is in the library.\n", bookToString));
+            throw new DataException(String.format("\nThe book being added (%s) is in the library.\n", prepareBooksToString(book)));
         }
         booksList.add(book);
-        Runner.LOGGER.info(String.format("Adding Book is Ended. Current Library size is %d.", getBookDaoSize()));
+        LOGGER.info(String.format("Adding Book is Ended. Current Library size is %d.", size()));
     }
 
-    public void removeBook(Book book) throws DataException {
+    public void remove(Book book) throws DataException {
         if (!booksList.contains(book)) {
-            String bookToString = prepareBooksToString(book);
-            throw new DataException(String.format("\nThe book being deleted (%s) is not in the library.\n", bookToString));
+            throw new DataException(String.format("\nThe book being deleted (%s) is not in the library.\n",prepareBooksToString(book)));
         }
         booksList.remove(book);
-        Runner.LOGGER.info(String.format("Removing Book is Ended. Current Library size is %d.", getBookDaoSize()));
+        LOGGER.info(String.format("Removing Book is Ended. Current Library size is %d.", size()));
+    }
+
+    public <T> List<Book> findByTag(BooksField booksField, T value) throws DataException {
+        Specification<T> specification = specificationFactory.create(booksField);
+        return specification.find(booksList, value);
+    }
+
+    public List<Book> sortBooksByTag(BooksField booksField) {
+        Comparator<Book> comparator = comparatorFactory.create(booksField);
+        Collections.sort(booksList, comparator);
+        LOGGER.info("Sorting Books is Ended.");
+        return booksList;
+    }
+
+    public int size() {
+        return booksList.size();
     }
 
     private String prepareBooksToString(Book book) {
         String bookToString = book.toString();
         int lastIndex = bookToString.length() - 1;
         return bookToString.substring(0, lastIndex);
-    }
-
-    public <T> List<Book> findByTag(BooksField booksField, T value) throws DataException {
-        SpecificationFactory specificationFactory = new SpecificationFactoryImpl();
-        Specification<T> specification = specificationFactory.create(booksField);
-        return specification.find(booksList, value);
-    }
-
-    public List<Book> sortBooksByTag(BooksField booksField) {
-        BookComparatorFactory comparatorFactory = new BookComparatorFactoryImpl();
-        Comparator<Book> comparator = comparatorFactory.create(booksField);
-        Collections.sort(booksList, comparator);
-        Runner.LOGGER.info("Sorting Books is Ended.");
-        return booksList;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-
-        BookDao bookDao = (BookDao) o;
-
-        return booksList.equals(bookDao.booksList);
-    }
-
-    @Override
-    public int hashCode() {
-        return booksList.hashCode();
-    }
-
-    @Override
-    public String toString() {
-        return "\nNow in our bookshelves:\n" + getBooksList(booksList);
-    }
-
-    private String getBooksList(List<Book> booksList) {
-        StringBuilder builder = new StringBuilder();
-        for (Book book : booksList) {
-            builder.append(book);
-        }
-        return builder.toString();
     }
 }

@@ -6,18 +6,18 @@ import com.epam.library.data.specification.*;
 public class SpecificationFactoryImpl implements SpecificationFactory {
 
     @Override
-    public <T> Specification<T> create(BooksField booksField) {
+    public <T> AbstractSpecification<T> create(BooksField booksField) {
         switch (booksField) {
             case TITLE:
-                return (Specification<T>) new TitleSpecification();
+                return (AbstractSpecification<T>) new TitleSpecification();
             case AUTHOR_NAME:
-                return (Specification<T>) new AuthorNameSpecification();
+                return (AbstractSpecification<T>) new AuthorNameSpecification();
             case WRITING_YEAR:
-                return (Specification<T>) new WritingYearSpecification();
+                return (AbstractSpecification<T>) new WritingYearSpecification();
             case GENRE:
-                return (Specification<T>) new GenreSpecification();
+                return (AbstractSpecification<T>) new GenreSpecification();
             default:
-                throw new IllegalArgumentException(String.format("Book field (%s) not found", booksField));
+                throw new IllegalArgumentException("Book field " + booksField + " not found");
         }
     }
 }
