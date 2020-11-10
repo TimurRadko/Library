@@ -1,8 +1,8 @@
 package com.epam.library.data.factory;
 
 import com.epam.library.data.BooksField;
-import com.epam.library.data.specification.AbstractSpecification;
+import com.epam.library.data.specification.Specification;
 
 public interface SpecificationFactory {
-    <T> AbstractSpecification<T> create(BooksField booksField);
+    Specification create(BooksField booksField);
 }
