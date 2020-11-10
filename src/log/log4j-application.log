@@ -1,0 +1,188 @@
+2020-10-23 15:41:52.453 INFO  com.epam.library.Runner:35 - Program Started.
+2020-10-23 15:41:52.611 INFO  com.epam.library.Runner:25 - Adding books to the Library.
+2020-10-23 15:41:52.701 INFO  com.epam.library.Runner:10 - 
+Now in our bookshelves:
+"Carrie", King S., 1976, Genre: Thriller
+"The Shining", King S., 1980, Genre: Thriller
+"A Game of Thrones", Martin G., 1996, Genre: Fantasy
+"A Feast for Crows", Martin G., 2005, Genre: Fantasy
+
+2020-10-23 15:41:52.708 INFO  com.epam.library.Runner:33 - Adding Book is Ended. Current Library size is 5.
+2020-10-23 15:41:53.646 INFO  com.epam.library.Runner:61 - Sorting Books is Ended.
+2020-10-23 15:41:53.648 INFO  com.epam.library.Runner:10 - 
+Now in our bookshelves:
+"1984", Orwell G., 1948, Genre: Dystopian
+"A Game of Thrones", Martin G., 1996, Genre: Fantasy
+"A Feast for Crows", Martin G., 2005, Genre: Fantasy
+"Carrie", King S., 1976, Genre: Thriller
+"The Shining", King S., 1980, Genre: Thriller
+
+2020-10-23 15:41:53.649 ERROR com.epam.library.Runner:70 - Cause of exception is: com.epam.library.exception.DataException: 
+The book being added ("A Feast for Crows", Martin G., 2005, Genre: Fantasy) is in the library.
+
+2020-10-23 15:41:53.649 ERROR com.epam.library.Runner:78 - Cause of exception is: com.epam.library.exception.DataException: 
+The book being deleted ("A Dance with Dragons", Martin G., 2011, Genre: Fantasy) is not in the library.
+
+2020-10-23 15:41:53.856 INFO  com.epam.library.Runner:22 - Searching Books by Tag is Ended. 2 books found.
+2020-10-23 15:41:53.856 INFO  com.epam.library.Runner:10 - 
+Now in our bookshelves:
+"A Game of Thrones", Martin G., 1996, Genre: Fantasy
+"A Feast for Crows", Martin G., 2005, Genre: Fantasy
+
+2020-10-23 15:41:53.857 INFO  com.epam.library.Runner:63 - Program ended.
+2020-11-02 19:32:00.797 INFO  com.epam.library.Runner:22 - Searching Books by Tag is Ended. 0 books found.
+2020-11-02 19:32:00.841 INFO  com.epam.library.Runner:22 - Searching Books by Tag is Ended. 2 books found.
+2020-11-02 19:32:01.026 INFO  com.epam.library.Runner:61 - Sorting Books is Ended.
+2020-11-02 19:40:55.019 INFO  com.epam.library.Runner:22 - Searching Books by Tag is Ended. 2 books found.
+2020-11-02 19:41:38.604 INFO  com.epam.library.Runner:22 - Searching Books by Tag is Ended. 2 books found.
+2020-11-02 19:44:01.230 INFO  com.epam.library.Runner:22 - Searching Books by Tag is Ended. 0 books found.
+2020-11-02 19:44:21.544 INFO  com.epam.library.Runner:22 - Searching Books by Tag is Ended. 0 books found.
+2020-11-02 19:44:53.143 INFO  com.epam.library.Runner:22 - Searching Books by Tag is Ended. 0 books found.
+2020-11-02 19:45:18.253 INFO  com.epam.library.Runner:22 - Searching Books by Tag is Ended. 0 books found.
+2020-11-02 19:45:18.283 INFO  com.epam.library.Runner:22 - Searching Books by Tag is Ended. 2 books found.
+2020-11-02 19:45:18.294 INFO  com.epam.library.Runner:61 - Sorting Books is Ended.
+2020-11-02 19:55:41.208 INFO  com.epam.library.Runner:22 - Searching Books by Tag is Ended. 0 books found.
+2020-11-02 19:55:41.215 INFO  com.epam.library.Runner:22 - Searching Books by Tag is Ended. 2 books found.
+2020-11-02 19:55:41.225 INFO  com.epam.library.Runner:61 - Sorting Books is Ended.
+2020-11-02 19:57:49.326 INFO  com.epam.library.Runner:22 - Searching Books by Tag is Ended. 0 books found.
+2020-11-02 19:57:49.341 INFO  com.epam.library.Runner:22 - Searching Books by Tag is Ended. 2 books found.
+2020-11-02 19:57:49.348 INFO  com.epam.library.Runner:61 - Sorting Books is Ended.
+2020-11-02 19:58:41.630 INFO  com.epam.library.Runner:22 - Searching Books by Tag is Ended. 0 books found.
+2020-11-02 19:58:41.648 INFO  com.epam.library.Runner:22 - Searching Books by Tag is Ended. 2 books found.
+2020-11-02 19:58:41.654 INFO  com.epam.library.Runner:61 - Sorting Books is Ended.
+2020-11-03 09:27:57.858 INFO  com.epam.library.Runner:35 - Program Started.
+2020-11-03 09:27:57.870 INFO  com.epam.library.data.BookListCreator:25 - Adding books to the Library.
+2020-11-03 09:27:57.886 INFO  com.epam.library.view.ConsoleBooksPrinter:12 - com.epam.library.data.BookDao@27bc2616
+2020-11-03 09:27:57.887 INFO  com.epam.library.Runner:52 - Program ended.
+2020-11-03 10:22:42.956 INFO  com.epam.library.Runner:35 - Program Started.
+2020-11-03 10:22:42.977 INFO  com.epam.library.data.BookListCreator:25 - Adding books to the Library.
+2020-11-03 10:22:43.023 INFO  com.epam.library.view.ConsoleBooksPrinter:15 - "Carrie", King S., 1976, Genre: Thriller
+
+2020-11-03 10:22:43.024 INFO  com.epam.library.view.ConsoleBooksPrinter:15 - "The Shining", King S., 1980, Genre: Thriller
+
+2020-11-03 10:22:43.024 INFO  com.epam.library.view.ConsoleBooksPrinter:15 - "A Game of Thrones", Martin G., 1996, Genre: Fantasy
+
+2020-11-03 10:22:43.029 INFO  com.epam.library.view.ConsoleBooksPrinter:15 - "A Feast for Crows", Martin G., 2005, Genre: Fantasy
+
+2020-11-03 10:22:43.030 INFO  com.epam.library.Runner:52 - Program ended.
+2020-11-03 10:23:05.504 INFO  com.epam.library.Runner:35 - Program Started.
+2020-11-03 10:23:05.518 INFO  com.epam.library.data.BookListCreator:25 - Adding books to the Library.
+2020-11-03 10:23:05.526 INFO  com.epam.library.view.ConsoleBooksPrinter:15 - "Carrie", King S., 1976, Genre: Thriller
+2020-11-03 10:23:05.527 INFO  com.epam.library.view.ConsoleBooksPrinter:15 - "The Shining", King S., 1980, Genre: Thriller
+2020-11-03 10:23:05.527 INFO  com.epam.library.view.ConsoleBooksPrinter:15 - "A Game of Thrones", Martin G., 1996, Genre: Fantasy
+2020-11-03 10:23:05.533 INFO  com.epam.library.view.ConsoleBooksPrinter:15 - "A Feast for Crows", Martin G., 2005, Genre: Fantasy
+2020-11-03 10:23:05.533 INFO  com.epam.library.Runner:52 - Program ended.
+2020-11-03 10:24:11.748 INFO  com.epam.library.Runner:35 - Program Started.
+2020-11-03 10:24:11.757 INFO  com.epam.library.data.BookListCreator:25 - Adding books to the Library.
+2020-11-03 10:24:11.767 INFO  com.epam.library.view.ConsoleBooksPrinter:13 - Now, in our bookshelves:
+
+2020-11-03 10:24:11.769 INFO  com.epam.library.view.ConsoleBooksPrinter:16 - "Carrie", King S., 1976, Genre: Thriller
+2020-11-03 10:24:11.769 INFO  com.epam.library.view.ConsoleBooksPrinter:16 - "The Shining", King S., 1980, Genre: Thriller
+2020-11-03 10:24:11.773 INFO  com.epam.library.view.ConsoleBooksPrinter:16 - "A Game of Thrones", Martin G., 1996, Genre: Fantasy
+2020-11-03 10:24:11.774 INFO  com.epam.library.view.ConsoleBooksPrinter:16 - "A Feast for Crows", Martin G., 2005, Genre: Fantasy
+2020-11-03 10:24:11.774 INFO  com.epam.library.Runner:52 - Program ended.
+2020-11-03 10:24:24.266 INFO  com.epam.library.Runner:35 - Program Started.
+2020-11-03 10:24:24.274 INFO  com.epam.library.data.BookListCreator:25 - Adding books to the Library.
+2020-11-03 10:24:24.284 INFO  com.epam.library.view.ConsoleBooksPrinter:13 - Now, in our bookshelves:
+2020-11-03 10:24:24.285 INFO  com.epam.library.view.ConsoleBooksPrinter:16 - "Carrie", King S., 1976, Genre: Thriller
+2020-11-03 10:24:24.285 INFO  com.epam.library.view.ConsoleBooksPrinter:16 - "The Shining", King S., 1980, Genre: Thriller
+2020-11-03 10:24:24.289 INFO  com.epam.library.view.ConsoleBooksPrinter:16 - "A Game of Thrones", Martin G., 1996, Genre: Fantasy
+2020-11-03 10:24:24.290 INFO  com.epam.library.view.ConsoleBooksPrinter:16 - "A Feast for Crows", Martin G., 2005, Genre: Fantasy
+2020-11-03 10:24:24.290 INFO  com.epam.library.Runner:52 - Program ended.
+2020-11-03 10:39:00.066 INFO  com.epam.library.data.BookListCreator:25 - Adding books to the Library.
+2020-11-03 10:41:05.355 INFO  com.epam.library.data.BookListCreator:25 - Adding books to the Library.
+2020-11-03 10:41:29.948 INFO  com.epam.library.data.BookListCreator:25 - Adding books to the Library.
+2020-11-03 10:41:52.125 INFO  com.epam.library.data.BookListCreator:25 - Adding books to the Library.
+2020-11-03 10:42:43.427 INFO  com.epam.library.data.BookListCreator:25 - Adding books to the Library.
+2020-11-03 10:50:01.413 INFO  com.epam.library.data.BookListCreator:25 - Adding books to the Library.
+2020-11-03 10:51:10.609 INFO  com.epam.library.data.BookListCreator:25 - Adding books to the Library.
+2020-11-03 10:51:52.650 INFO  com.epam.library.data.BookListCreator:25 - Adding books to the Library.
+2020-11-03 10:53:01.357 INFO  com.epam.library.data.BookListCreator:25 - Adding books to the Library.
+2020-11-03 10:53:37.461 INFO  com.epam.library.data.BookListCreator:25 - Adding books to the Library.
+2020-11-03 10:58:19.973 INFO  com.epam.library.data.BookListCreator:25 - Adding books to the Library.
+2020-11-03 11:32:13.097 INFO  com.epam.library.data.BookDao:38 - Adding Book is Ended. Current Library size is 3.
+2020-11-03 11:35:57.846 INFO  com.epam.library.data.BookDao:38 - Adding Book is Ended. Current Library size is 3.
+2020-11-03 11:39:15.696 INFO  com.epam.library.data.BookDao:38 - Adding Book is Ended. Current Library size is 3.
+2020-11-03 11:44:19.498 INFO  com.epam.library.data.BookDao:46 - Removing Book is Ended. Current Library size is 1.
+2020-11-03 11:45:46.655 INFO  com.epam.library.data.BookDao:46 - Removing Book is Ended. Current Library size is 1.
+2020-11-03 12:04:40.418 INFO  epam.library.data.specification.AbstractSpecification:25 - Searching Books by Tag is Ended. 2 books found.
+2020-11-03 12:06:21.875 INFO  epam.library.data.specification.AbstractSpecification:25 - Searching Books by Tag is Ended. 2 books found.
+2020-11-03 12:09:16.706 INFO  epam.library.data.specification.AbstractSpecification:25 - Searching Books by Tag is Ended. 0 books found.
+2020-11-03 12:10:22.499 INFO  epam.library.data.specification.AbstractSpecification:25 - Searching Books by Tag is Ended. 0 books found.
+2020-11-03 12:13:39.977 INFO  com.epam.library.data.BookDao:57 - Sorting Books is Ended.
+2020-11-03 12:24:59.941 INFO  epam.library.data.specification.AbstractSpecification:25 - Searching Books by Tag is Ended. 0 books found.
+2020-11-03 12:24:59.953 INFO  com.epam.library.data.BookDao:46 - Removing Book is Ended. Current Library size is 1.
+2020-11-03 12:24:59.957 INFO  epam.library.data.specification.AbstractSpecification:25 - Searching Books by Tag is Ended. 2 books found.
+2020-11-03 12:24:59.996 INFO  com.epam.library.data.BookDao:57 - Sorting Books is Ended.
+2020-11-03 12:24:59.998 INFO  com.epam.library.data.BookDao:38 - Adding Book is Ended. Current Library size is 3.
+2020-11-03 12:44:38.227 INFO  epam.library.data.specification.AbstractSpecification:25 - Searching Books by Tag is Ended. 0 books found.
+2020-11-03 12:44:38.238 INFO  com.epam.library.data.BookDao:46 - Removing Book is Ended. Current Library size is 1.
+2020-11-03 12:44:38.242 INFO  epam.library.data.specification.AbstractSpecification:25 - Searching Books by Tag is Ended. 2 books found.
+2020-11-03 12:44:38.255 INFO  com.epam.library.data.BookDao:57 - Sorting Books is Ended.
+2020-11-03 12:44:38.258 INFO  com.epam.library.data.BookDao:38 - Adding Book is Ended. Current Library size is 3.
+2020-11-03 12:44:43.297 INFO  com.epam.library.Runner:35 - Program Started.
+2020-11-03 12:44:43.311 INFO  com.epam.library.data.BookListCreator:25 - Adding books to the Library.
+2020-11-03 12:44:43.357 INFO  com.epam.library.view.ConsoleBooksPrinter:13 - Now, in our bookshelves:
+2020-11-03 12:44:43.357 INFO  com.epam.library.view.ConsoleBooksPrinter:16 - "Carrie", King S., 1976, Genre: Thriller
+2020-11-03 12:44:43.358 INFO  com.epam.library.view.ConsoleBooksPrinter:16 - "The Shining", King S., 1980, Genre: Thriller
+2020-11-03 12:44:43.361 INFO  com.epam.library.view.ConsoleBooksPrinter:16 - "A Game of Thrones", Martin G., 1996, Genre: Fantasy
+2020-11-03 12:44:43.361 INFO  com.epam.library.view.ConsoleBooksPrinter:16 - "A Feast for Crows", Martin G., 2005, Genre: Fantasy
+2020-11-03 12:44:43.361 INFO  com.epam.library.Runner:52 - Program ended.
+2020-11-03 12:46:34.896 INFO  com.epam.library.Runner:35 - Program Started.
+2020-11-03 12:46:34.904 INFO  com.epam.library.data.BookListCreator:25 - Adding books to the Library.
+2020-11-03 12:46:34.940 INFO  com.epam.library.view.ConsoleBooksPrinter:13 - Now, in our bookshelves:
+2020-11-03 12:46:34.941 INFO  com.epam.library.view.ConsoleBooksPrinter:16 - "Carrie", King S., 1976, Genre: Thriller
+2020-11-03 12:46:34.941 INFO  com.epam.library.view.ConsoleBooksPrinter:16 - "The Shining", King S., 1980, Genre: Thriller
+2020-11-03 12:46:34.945 INFO  com.epam.library.view.ConsoleBooksPrinter:16 - "A Game of Thrones", Martin G., 1996, Genre: Fantasy
+2020-11-03 12:46:34.945 INFO  com.epam.library.view.ConsoleBooksPrinter:16 - "A Feast for Crows", Martin G., 2005, Genre: Fantasy
+2020-11-03 12:46:34.946 INFO  com.epam.library.Runner:52 - Program ended.
+2020-11-03 12:46:50.083 INFO  epam.library.data.specification.AbstractSpecification:25 - Searching Books by Tag is Ended. 0 books found.
+2020-11-03 12:46:50.092 INFO  com.epam.library.data.BookDao:46 - Removing Book is Ended. Current Library size is 1.
+2020-11-03 12:46:50.095 INFO  epam.library.data.specification.AbstractSpecification:25 - Searching Books by Tag is Ended. 2 books found.
+2020-11-03 12:46:50.099 INFO  com.epam.library.data.BookDao:57 - Sorting Books is Ended.
+2020-11-03 12:46:50.102 INFO  com.epam.library.data.BookDao:38 - Adding Book is Ended. Current Library size is 3.
+2020-11-03 12:46:50.108 INFO  com.epam.library.data.BookListCreator:25 - Adding books to the Library.
+2020-11-03 13:11:54.252 INFO  epam.library.data.specification.AbstractSpecification:25 - Searching Books by Tag is Ended. 0 books found.
+2020-11-03 13:11:54.261 INFO  com.epam.library.data.BookDao:46 - Removing Book is Ended. Current Library size is 1.
+2020-11-03 13:11:54.265 INFO  epam.library.data.specification.AbstractSpecification:25 - Searching Books by Tag is Ended. 2 books found.
+2020-11-03 13:11:54.274 INFO  com.epam.library.data.BookDao:57 - Sorting Books is Ended.
+2020-11-03 13:11:54.277 INFO  com.epam.library.data.BookDao:38 - Adding Book is Ended. Current Library size is 3.
+2020-11-03 13:11:54.282 INFO  com.epam.library.data.BookListCreator:25 - Adding books to the Library.
+2020-11-03 13:14:49.712 INFO  epam.library.data.specification.AbstractSpecification:25 - Searching Books by Tag is Ended. 0 books found.
+2020-11-03 13:14:49.723 INFO  com.epam.library.data.BookDao:46 - Removing Book is Ended. Current Library size is 1.
+2020-11-03 13:14:49.730 INFO  epam.library.data.specification.AbstractSpecification:25 - Searching Books by Tag is Ended. 2 books found.
+2020-11-03 13:14:49.736 INFO  com.epam.library.data.BookDao:57 - Sorting Books is Ended.
+2020-11-03 13:14:49.737 INFO  com.epam.library.data.BookDao:38 - Adding Book is Ended. Current Library size is 3.
+2020-11-03 13:14:49.745 INFO  com.epam.library.data.BookListCreator:29 - Adding books to the Library.
+2020-11-03 14:07:57.670 INFO  epam.library.data.specification.AbstractSpecification:25 - Searching Books by Tag is Ended. 0 books found.
+2020-11-03 14:07:57.678 INFO  com.epam.library.data.BookDao:46 - Removing Book is Ended. Current Library size is 1.
+2020-11-03 14:07:57.680 INFO  epam.library.data.specification.AbstractSpecification:25 - Searching Books by Tag is Ended. 2 books found.
+2020-11-03 14:07:57.685 INFO  com.epam.library.data.BookDao:57 - Sorting Books is Ended.
+2020-11-03 14:07:57.687 INFO  com.epam.library.data.BookDao:38 - Adding Book is Ended. Current Library size is 3.
+2020-11-03 14:07:57.691 INFO  com.epam.library.data.BookListCreator:29 - Adding books to the Library.
+2020-11-10 15:15:05.861 INFO  com.epam.library.data.BookDao:38 - Adding Book is Ended. Current Library size is 3.
+2020-11-10 15:17:37.728 INFO  epam.library.data.specification.AbstractSpecification:25 - Searching Books by Tag is Ended. 2 books found.
+2020-11-10 15:46:17.108 INFO  epam.library.data.specification.AbstractSpecification:25 - Searching Books by Tag is Ended. 0 books found.
+2020-11-10 15:46:17.117 INFO  com.epam.library.data.BookDao:48 - Removing Book is Ended. Current Library size is 1.
+2020-11-10 15:46:17.120 INFO  epam.library.data.specification.AbstractSpecification:25 - Searching Books by Tag is Ended. 2 books found.
+2020-11-10 15:46:17.129 INFO  com.epam.library.data.BookDao:59 - Sorting Books is Ended.
+2020-11-10 15:46:17.131 INFO  com.epam.library.data.BookDao:39 - Adding Book is Ended. Current Library size is 3.
+2020-11-10 15:46:17.136 INFO  com.epam.library.data.BookListCreator:29 - Adding books to the Library.
+2020-11-10 15:50:44.451 INFO  epam.library.data.specification.AbstractSpecification:25 - Searching Books by Tag is Ended. 0 books found.
+2020-11-10 15:50:44.461 INFO  com.epam.library.data.BookDao:48 - Removing Book is Ended. Current Library size is 1.
+2020-11-10 15:50:44.464 INFO  epam.library.data.specification.AbstractSpecification:25 - Searching Books by Tag is Ended. 2 books found.
+2020-11-10 15:50:44.471 INFO  com.epam.library.data.BookDao:59 - Sorting Books is Ended.
+2020-11-10 15:50:44.473 INFO  com.epam.library.data.BookDao:39 - Adding Book is Ended. Current Library size is 3.
+2020-11-10 15:50:44.478 INFO  com.epam.library.data.BookListCreator:29 - Adding books to the Library.
+2020-11-10 15:53:13.590 INFO  epam.library.data.specification.AbstractSpecification:25 - Searching Books by Tag is Ended. 0 books found.
+2020-11-10 15:53:13.600 INFO  com.epam.library.data.BookDao:48 - Removing Book is Ended. Current Library size is 1.
+2020-11-10 15:53:13.602 INFO  epam.library.data.specification.AbstractSpecification:25 - Searching Books by Tag is Ended. 2 books found.
+2020-11-10 15:53:13.609 INFO  com.epam.library.data.BookDao:59 - Sorting Books is Ended.
+2020-11-10 15:53:13.610 INFO  com.epam.library.data.BookDao:39 - Adding Book is Ended. Current Library size is 3.
+2020-11-10 15:53:13.615 INFO  com.epam.library.data.BookListCreator:29 - Adding books to the Library.
+2020-11-10 15:53:39.518 INFO  epam.library.data.specification.AbstractSpecification:25 - Searching Books by Tag is Ended. 0 books found.
+2020-11-10 15:53:39.526 INFO  com.epam.library.data.BookDao:48 - Removing Book is Ended. Current Library size is 1.
+2020-11-10 15:53:39.530 INFO  epam.library.data.specification.AbstractSpecification:25 - Searching Books by Tag is Ended. 2 books found.
+2020-11-10 15:53:39.534 INFO  com.epam.library.data.BookDao:59 - Sorting Books is Ended.
+2020-11-10 15:53:39.536 INFO  com.epam.library.data.BookDao:39 - Adding Book is Ended. Current Library size is 3.
+2020-11-10 15:53:39.540 INFO  com.epam.library.data.BookListCreator:29 - Adding books to the Library.

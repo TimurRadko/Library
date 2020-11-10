@@ -1,0 +1,2 @@
+"Carrie", King S., 1976, Genre: Thriller
+"The Shining", King S., 1980, Genre: Thriller
