@@ -1,4 +1,4 @@
-package com.epam.library.data;
+package com.epam.library.data.reader;
 
 import com.epam.library.exception.DataException;
 import org.junit.Assert;
@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import java.util.List;
 
-public class FileDataAcquirerTest {
+public class FileDataReaderTest {
     private static final String VALID_DATA_FILE = "src/test/resources/test_data.txt";
     private static final String FAILED_FILE_PATH = "src/test/resources/failed.txt";
     private static final int FIRST_STRING_INDEX = 0;
@@ -14,7 +14,7 @@ public class FileDataAcquirerTest {
 
     @Test
     public void testReadShouldCorrectReadIfFileExists() throws DataException {
-        FileDataAcquirer dataAcquirer = new FileDataAcquirer();
+        DataReader dataAcquirer = new FileDataReader();
         List<String> lines = dataAcquirer.read(VALID_DATA_FILE);
         String actualString = lines.get(FIRST_STRING_INDEX);
         Assert.assertEquals(EXPECTED_STRING, actualString);
@@ -22,7 +22,7 @@ public class FileDataAcquirerTest {
 
     @Test(expected = DataException.class)
     public void testReadShouldThrowDataExceptionIfFileNotExists() throws DataException {
-        FileDataAcquirer dataAcquirer = new FileDataAcquirer();
+        DataReader dataAcquirer = new FileDataReader();
         dataAcquirer.read(FAILED_FILE_PATH);
     }
 }

@@ -8,14 +8,17 @@ public class AuthorNameBookComparator implements Comparator<Book> {
 
     @Override
     public int compare(Book firstBook, Book secondBook) {
-        if (firstBook == null) {
-            return secondBook == null ? 0 : 1;
-        }
-        if (secondBook == null) {
-            return 1;
-        }
         String fistBookAuthorName = firstBook.getAuthorName();
         String secondBookAuthorName = secondBook.getAuthorName();
+        if (fistBookAuthorName == null && secondBookAuthorName == null) {
+            return 0;
+        }
+        if (fistBookAuthorName == null) {
+            return -1;
+        }
+        if (secondBookAuthorName == null) {
+            return 1;
+        }
 
         return fistBookAuthorName.compareToIgnoreCase(secondBookAuthorName);
     }

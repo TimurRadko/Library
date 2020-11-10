@@ -160,3 +160,29 @@ Now in our bookshelves:
 2020-11-03 14:07:57.685 INFO  com.epam.library.data.BookDao:57 - Sorting Books is Ended.
 2020-11-03 14:07:57.687 INFO  com.epam.library.data.BookDao:38 - Adding Book is Ended. Current Library size is 3.
 2020-11-03 14:07:57.691 INFO  com.epam.library.data.BookListCreator:29 - Adding books to the Library.
+2020-11-10 15:15:05.861 INFO  com.epam.library.data.BookDao:38 - Adding Book is Ended. Current Library size is 3.
+2020-11-10 15:17:37.728 INFO  epam.library.data.specification.AbstractSpecification:25 - Searching Books by Tag is Ended. 2 books found.
+2020-11-10 15:46:17.108 INFO  epam.library.data.specification.AbstractSpecification:25 - Searching Books by Tag is Ended. 0 books found.
+2020-11-10 15:46:17.117 INFO  com.epam.library.data.BookDao:48 - Removing Book is Ended. Current Library size is 1.
+2020-11-10 15:46:17.120 INFO  epam.library.data.specification.AbstractSpecification:25 - Searching Books by Tag is Ended. 2 books found.
+2020-11-10 15:46:17.129 INFO  com.epam.library.data.BookDao:59 - Sorting Books is Ended.
+2020-11-10 15:46:17.131 INFO  com.epam.library.data.BookDao:39 - Adding Book is Ended. Current Library size is 3.
+2020-11-10 15:46:17.136 INFO  com.epam.library.data.BookListCreator:29 - Adding books to the Library.
+2020-11-10 15:50:44.451 INFO  epam.library.data.specification.AbstractSpecification:25 - Searching Books by Tag is Ended. 0 books found.
+2020-11-10 15:50:44.461 INFO  com.epam.library.data.BookDao:48 - Removing Book is Ended. Current Library size is 1.
+2020-11-10 15:50:44.464 INFO  epam.library.data.specification.AbstractSpecification:25 - Searching Books by Tag is Ended. 2 books found.
+2020-11-10 15:50:44.471 INFO  com.epam.library.data.BookDao:59 - Sorting Books is Ended.
+2020-11-10 15:50:44.473 INFO  com.epam.library.data.BookDao:39 - Adding Book is Ended. Current Library size is 3.
+2020-11-10 15:50:44.478 INFO  com.epam.library.data.BookListCreator:29 - Adding books to the Library.
+2020-11-10 15:53:13.590 INFO  epam.library.data.specification.AbstractSpecification:25 - Searching Books by Tag is Ended. 0 books found.
+2020-11-10 15:53:13.600 INFO  com.epam.library.data.BookDao:48 - Removing Book is Ended. Current Library size is 1.
+2020-11-10 15:53:13.602 INFO  epam.library.data.specification.AbstractSpecification:25 - Searching Books by Tag is Ended. 2 books found.
+2020-11-10 15:53:13.609 INFO  com.epam.library.data.BookDao:59 - Sorting Books is Ended.
+2020-11-10 15:53:13.610 INFO  com.epam.library.data.BookDao:39 - Adding Book is Ended. Current Library size is 3.
+2020-11-10 15:53:13.615 INFO  com.epam.library.data.BookListCreator:29 - Adding books to the Library.
+2020-11-10 15:53:39.518 INFO  epam.library.data.specification.AbstractSpecification:25 - Searching Books by Tag is Ended. 0 books found.
+2020-11-10 15:53:39.526 INFO  com.epam.library.data.BookDao:48 - Removing Book is Ended. Current Library size is 1.
+2020-11-10 15:53:39.530 INFO  epam.library.data.specification.AbstractSpecification:25 - Searching Books by Tag is Ended. 2 books found.
+2020-11-10 15:53:39.534 INFO  com.epam.library.data.BookDao:59 - Sorting Books is Ended.
+2020-11-10 15:53:39.536 INFO  com.epam.library.data.BookDao:39 - Adding Book is Ended. Current Library size is 3.
+2020-11-10 15:53:39.540 INFO  com.epam.library.data.BookListCreator:29 - Adding books to the Library.

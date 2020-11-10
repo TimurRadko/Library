@@ -8,14 +8,17 @@ public class GenreBookComparator implements Comparator<Book> {
 
     @Override
     public int compare(Book firstBook, Book secondBook) {
-        if (firstBook == null) {
-            return secondBook == null ? 0 : 1;
-        }
-        if (secondBook == null) {
-            return 1;
-        }
         String fistBookGenre = firstBook.getGenre();
         String secondBookGenre = secondBook.getGenre();
+        if (fistBookGenre == null && secondBookGenre == null) {
+            return 0;
+        }
+        if (fistBookGenre == null) {
+            return -1;
+        }
+        if (secondBookGenre == null) {
+            return 1;
+        }
         return fistBookGenre.compareToIgnoreCase(secondBookGenre);
     }
 }

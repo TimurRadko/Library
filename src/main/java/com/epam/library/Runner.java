@@ -3,7 +3,8 @@ package com.epam.library;
 import com.epam.library.data.BookListCreator;
 import com.epam.library.data.BookDao;
 import com.epam.library.data.BookParser;
-import com.epam.library.data.FileDataAcquirer;
+import com.epam.library.data.reader.DataReader;
+import com.epam.library.data.reader.FileDataReader;
 import com.epam.library.data.factory.BookComparatorFactory;
 import com.epam.library.data.factory.BookComparatorFactoryImpl;
 import com.epam.library.data.factory.SpecificationFactory;
@@ -34,7 +35,7 @@ public class Runner {
     private static void runLibrary() throws DataException {
         LOGGER.info("Program Started.");
 
-        FileDataAcquirer dataAcquirer = new FileDataAcquirer();
+        DataReader dataAcquirer = new FileDataReader();
         List<String> lines = dataAcquirer.read(FILE_PATH);
 
         BookParser bookParser = new BookParser();

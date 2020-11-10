@@ -1,4 +1,4 @@
-package com.epam.library.data;
+package com.epam.library.data.reader;
 
 import com.epam.library.exception.DataException;
 import org.apache.log4j.Logger;
@@ -9,9 +9,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FileDataAcquirer {
-    private static final Logger LOGGER = Logger.getLogger(FileDataAcquirer.class);
+public class FileDataReader implements DataReader {
+    private static final Logger LOGGER = Logger.getLogger(FileDataReader.class);
 
+    @Override
     public List<String> read(String filename) throws DataException {
         BufferedReader reader = null;
         List<String> lines = new ArrayList<>();

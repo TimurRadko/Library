@@ -32,7 +32,8 @@ public class BookDao {
 
     public void add(Book book) throws DataException {
         if (booksList.contains(book)) {
-            throw new DataException(String.format("\nThe book being added (%s) is in the library.\n", prepareBooksToString(book)));
+            throw new DataException(String.format("\nThe book being added (%s) is in the library.\n",
+                    prepareBooksToString(book)));
         }
         booksList.add(book);
         LOGGER.info(String.format("Adding Book is Ended. Current Library size is %d.", size()));
@@ -40,7 +41,8 @@ public class BookDao {
 
     public void remove(Book book) throws DataException {
         if (!booksList.contains(book)) {
-            throw new DataException(String.format("\nThe book being deleted (%s) is not in the library.\n",prepareBooksToString(book)));
+            throw new DataException(String.format("\nThe book being deleted (%s) is not in the library.\n",
+                    prepareBooksToString(book)));
         }
         booksList.remove(book);
         LOGGER.info(String.format("Removing Book is Ended. Current Library size is %d.", size()));

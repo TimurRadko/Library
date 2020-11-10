@@ -30,7 +30,7 @@ public class BookDaoTest {
     private static final String ORWELL_G = "Orwell G.";
 
     @Before
-    public void creatingDependencies() {
+    public void injectingDependencies() {
         SpecificationFactory specificationFactory = Mockito.mock(SpecificationFactory.class);
         BookComparatorFactory comparatorFactory = Mockito.mock(BookComparatorFactory.class);
         actualDao = new BookDao(defaultBookList, specificationFactory, comparatorFactory);
@@ -39,7 +39,10 @@ public class BookDaoTest {
     @Test
     public void testAddBookShouldAddWhenBookIsNotListed() throws DataException {
         actualDao.add(EIGHTEEN_EIGHTY_FOUR);
-        Assert.assertEquals(EXPECTED_DAO_SIZE_ADD_TESTS, actualDao.size());
+        int actualDaoSize = actualDao.size();
+        Book actualBook = actualDao.get(2);
+        Assert.assertEquals(EXPECTED_DAO_SIZE_ADD_TESTS, actualDaoSize);
+        Assert.assertEquals(EIGHTEEN_EIGHTY_FOUR, actualBook);
     }
 
     @Test(expected = DataException.class)
@@ -59,7 +62,7 @@ public class BookDaoTest {
     public void testRemoveBookShouldThrowExceptionWhenBookIsNotListed() throws DataException {
         actualDao.remove(EIGHTEEN_EIGHTY_FOUR);
     }
-//
+
     @Test
     public void testFindByTagShouldFindCorrectListWhenAuthorExists() throws DataException {
         SpecificationFactory specificationFactory = new SpecificationFactoryImpl();

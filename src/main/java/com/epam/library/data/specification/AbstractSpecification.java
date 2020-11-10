@@ -22,7 +22,8 @@ public abstract class AbstractSpecification<T> implements Specification<T> {
                 findingBooks.add(book);
             }
         }
-        LOGGER.info(String.format("Searching Books by Tag is Ended. %d books found.", findingBooks.size()));
+        LOGGER.info(String.format("Searching Books by Tag is Ended. %d books found.",
+                findingBooks.size()));
         return findingBooks;
     }
 }

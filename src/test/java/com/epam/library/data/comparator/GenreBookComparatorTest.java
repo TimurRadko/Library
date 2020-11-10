@@ -9,6 +9,8 @@ import java.util.Comparator;
 public class GenreBookComparatorTest {
     private static final Book MAJOR_BOOK = new Book("B", "B", 1, "B");
     private static final Book MINOR_BOOK = new Book("B", "B", 1, "A");
+    private static final Book BOOK_WITH_NULLABLE_FIELDS =
+            new Book(null, null, 1, null);
 
     @Test
     public void testCompareShouldReturnCorrectAnswer() {
@@ -18,23 +20,23 @@ public class GenreBookComparatorTest {
     }
 
     @Test
-    public void testCompareShouldReturnOneWhenFirstBookIsNull() {
+    public void testCompareShouldReturnOneWhenFirstBookHasNullableFields() {
         Comparator<Book> comparator = new GenreBookComparator();
-        int actualResult = comparator.compare(null, MINOR_BOOK);
+        int actualResult = comparator.compare(BOOK_WITH_NULLABLE_FIELDS, MINOR_BOOK);
+        Assert.assertEquals(-1, actualResult);
+    }
+
+    @Test
+    public void testCompareShouldReturnOneWhenSecondBookHasNullableFields() {
+        Comparator<Book> comparator = new GenreBookComparator();
+        int actualResult = comparator.compare(MINOR_BOOK, BOOK_WITH_NULLABLE_FIELDS);
         Assert.assertEquals(1, actualResult);
     }
 
     @Test
-    public void testCompareShouldReturnOneWhenSecondBookIsNull() {
+    public void testCompareShouldReturnZeroWhenBothBookHaveNullableFields() {
         Comparator<Book> comparator = new GenreBookComparator();
-        int actualResult = comparator.compare(MINOR_BOOK, null);
-        Assert.assertEquals(1, actualResult);
-    }
-
-    @Test
-    public void testCompareShouldReturnZeroWhenBothBookIsNull() {
-        Comparator<Book> comparator = new GenreBookComparator();
-        int actualResult = comparator.compare(null, null);
+        int actualResult = comparator.compare(BOOK_WITH_NULLABLE_FIELDS, BOOK_WITH_NULLABLE_FIELDS);
         Assert.assertEquals(0, actualResult);
     }
 }
